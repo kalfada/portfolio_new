@@ -1,0 +1,31 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width: 800px;
+    filter: blur(8px);
+    border-radius: 32px;
+}
+
+.imgContainer {
+    position: relative;
+}
+
+.imgOverlay {
+    --padding: 32px;
+    position: absolute;
+    display: flex;
+    padding: var(--padding);
+    top: 0;
+    width: calc(100% - (var(--padding) * 2));
+    height: calc(100% - (var(--padding) * 2));
+    z-index: 2;
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    /* background-color: rgba(73, 61, 61, 0.1); */
+}

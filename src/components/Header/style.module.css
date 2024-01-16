@@ -1,20 +1,22 @@
 .nav {
+    --header-height: 60px;
     --padding-width: 32px;
+    position: fixed;
     display: flex;
     align-items: center;
     padding: 0 var(--padding-width);
     width: calc(100vw - (var(--padding-width) * 2));
-    height: 60px;
+    height: var(--header-height);
     justify-content: space-between;
-    border-bottom: 1px solid black;
     color: white;
     background-color: black;
 }
 
 .navOptions {
+    --navOptions-position: 16px;
     position: absolute;
-    bottom: 32px;
-    right: 32px;
+    bottom: calc(-100vh + var(--header-height) + var(--navOptions-position));
+    right: var(--navOptions-position);
     display: flex;
     flex-direction: column;
     align-items: center;
